@@ -1,0 +1,56 @@
+/*!
+ * jQuery Slicebar - Slicebar plugin
+ * Copyright(c) 2012 Gilles Grousset <gi.grousset@rgmail.com>
+ *
+ * http://github.com/zippy1978/jquery.slicebar
+ */
+
+.slicebar {
+    padding: 5px;
+}
+
+.slicebar .bar {
+    background-color: #1a1a1a;
+    height: 25px;
+    padding: 5px;
+    width: 100%;		
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    -webkit-box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+    box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;	          
+}
+
+.slicebar .bar span {
+    display: inline-block;
+    height: 100%;
+    -webkit-transition: width .4s ease-in-out;
+    -moz-transition: width .4s ease-in-out;
+    -ms-transition: width .4s ease-in-out;
+    -o-transition: width .4s ease-in-out;
+    transition: width .4s ease-in-out;    
+}
+
+.slicebar .bar .slice {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .5) inset;
+}
+
+.slicebar .labels {
+    width: 100%;
+    padding: 5px;
+    height : 25px;
+}
+
+.slicebar .labels span {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    color: #FFF;
+    vertical-align: top;
+}

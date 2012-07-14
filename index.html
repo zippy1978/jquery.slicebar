@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd"
+    >
+<html lang="en">
+<head>
+    <title>jQuery Slicebar</title>
+    
+    <!-- Slicebar style sheet -->
+    <link href="jquery.slicebar.css" rel="stylesheet" type="text/css"/>
+    
+    <!-- jQuery library -->
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    
+    <!-- Optinal (for grandient support) xcolor plugin -->
+    <script src="https://raw.github.com/infusion/jQuery-xcolor/master/jquery.xcolor.min.js"></script>
+    
+    <!-- Slicebar plugin -->
+    <script src="jquery.slicebar.js"></script>
+    
+    <script>
+        $(function() {
+            
+            $('#slicebar1').slicebar();
+            
+            $('#slicebar2').slicebar({
+                max : 100,
+                slices : [
+                    {
+                        value: 20,
+                        label : 'Green plain slice',
+                        color : 'green',
+                        style : 'plain'
+                    },
+                     {
+                        value: 20,
+                        label : 'Emtpy',
+                        style : 'empty'
+                    },
+                    {
+                        value: 40,
+                        label : 'Orange gradient slice',
+                        color : 'orange',
+                        style : 'gradient'
+                    }
+                ]
+            });
+        });
+    </script>
+    
+    <style>
+        
+        body {
+            color: #fff;
+            margin: 20px;
+            font: 13px 'trebuchet MS',Arial,Helvetica;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background: #45484d; /* Old browsers */
+            background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  #45484d 0%,#000000 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+        }
+    </style>
+</head>
+<body>
+    <h1>jQuery Slicebar v1.0</h1>
+    
+    <h2>Basic use</h2>
+    <p>
+        Call <b>.slicebar()</b> on any <b>div</b> selector to enable the slicebar. When no data are provided, default one are used.
+    </p>
+    <h3>Code</h3>
+    <pre>$('#slicebar1').slicebar();</pre>
+    <h3>Result</h3>
+    <div id="slicebar1"></div>
+    
+    <h2>Providing data</h2>
+    <p>
+        Use options to provide a data model to the slicebar. <b>max</b> allows you to set the bar max value, then <b>slices</b> can be defined.
+    </p>
+    <p>
+        A slice can have the following properties :
+    </p>
+    <ul>
+        <li><b>value</b> : the value of the slice.</li>
+        <li><b>label</b> : the label of the slice.</li>
+        <li><b>color</b> : the color of the slice.</li>
+        <li><b>style</b> : the style of the slice, can be : <b>plain</b> (plain color), <b>gradient</b> (gradient color, <a target="_blank" href="https://github.com/infusion/jQuery-xcolor">xcolor</a> plugin must be loaded) or <b>empty</b> (empty slice)</li>
+    </ul>
+    <h3>Code</h3>
+    <pre> $('#slicebar2').slicebar({
+        max : 100,
+        slices : [
+            {
+                value: 20,
+                label : 'Green plain slice',
+                color : 'green',
+                style : 'plain'
+            },
+             {
+                value: 20,
+                label : 'Emtpy',
+                style : 'empty'
+            },
+            {
+                value: 40,
+                label : 'Orange gradient slice',
+                color : 'orange',
+                style : 'gradient'
+            }
+        ]
+    });</pre>
+    <h3>Result</h3>
+    <div id="slicebar2"></div>
+    
+    <h2>Styling</h2>
+    <p>Styles are defined in the provided <b>jquery.slicebar.css</b> stylsheet. It if fairly easy to override them. Styles are : </p>
+    <ul>
+        <li><b>.slicebar</b> : container style.</li>
+        <li><b>.slicebar .bar</b> : bar style.</li>
+        <li><b>.slicebar .bar .slice</b> : common slice style.</li>
+        <li><b>.slicebar .labels</b> : labels style.</li>
+    </ul>
+</body>
+</html>
